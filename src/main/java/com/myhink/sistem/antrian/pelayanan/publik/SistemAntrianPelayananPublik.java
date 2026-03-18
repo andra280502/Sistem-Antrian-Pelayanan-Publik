@@ -16,20 +16,30 @@ public class SistemAntrianPelayananPublik {
 
     public static void main(String[] args) {
 
-        // membuat object dari class LayananPublik
-        LayananPublik layanan = new LayananPublik();
+    // =====================
+    // OUTPUT CONSOLE
+    // =====================
+    LayananPublik layanan = new LayananPublik(
+        "Andra Syailendra Perdana",
+        "Pembuatan KTP",
+        "Dinas Kependudukan"
+    );
 
-        // mengisi data pelayanan publik
-        layanan.setNamaPemohon("Andra Syailendra Perdana");
-        layanan.setJenisLayanan("Pembuatan KTP");
-        layanan.setInstansi("Dinas Kependudukan");
+    System.out.println("==================================");
+    System.out.println("      SISTEM PELAYANAN PUBLIK     ");
+    System.out.println("==================================");
 
-        // menampilkan judul program
-        System.out.println("==================================");
-        System.out.println("      SISTEM PELAYANAN PUBLIK     ");
-        System.out.println("==================================");
+    layanan.tampilData();
 
-        // memanggil method untuk menampilkan data
-        layanan.tampilData();
+
+    // =====================
+    // TAMPILKAN GUI
+    // =====================
+    java.awt.EventQueue.invokeLater(new Runnable() {
+        public void run() {
+            new GUISISTEMANTRIANPELAYANANPUBLIK().setVisible(true);
+        }
+    });
+    
     }
 }

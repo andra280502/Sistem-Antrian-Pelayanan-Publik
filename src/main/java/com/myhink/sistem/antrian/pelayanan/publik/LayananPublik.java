@@ -9,40 +9,42 @@ package com.myhink.sistem.antrian.pelayanan.publik;
  * @author AndraSP
  */
 /**
- * Object Class
- * Class ini digunakan untuk menyimpan data pelayanan publik
- * Tema : Layanan Publik
+ * Class LayananPublik
+ * Berfungsi sebagai class model untuk menyimpan data pelayanan publik
+ * Tema: Sistem Antrian Pelayanan Publik
  */
 public class LayananPublik {
 
-    // atribut untuk menyimpan data pemohon pelayanan
+    // atribut untuk menyimpan data pemohon
     String namaPemohon;
     String jenisLayanan;
     String instansi;
 
     /**
-     * method untuk mengisi nama pemohon
+     * Constructor
+     * Digunakan untuk menginisialisasi data saat object dibuat
+     * @param nama nama pemohon
+     * @param layanan jenis layanan yang dipilih
+     * @param instansi instansi terkait pelayanan
      */
+    public LayananPublik(String nama, String layanan, String instansi){
+        this.namaPemohon = nama;
+        this.jenisLayanan = layanan;
+        this.instansi = instansi;
+    }
     void setNamaPemohon(String nama){
         this.namaPemohon = nama;
     }
 
-    /**
-     * method untuk mengisi jenis layanan
-     */
     void setJenisLayanan(String layanan){
         this.jenisLayanan = layanan;
     }
 
-    /**
-     * method untuk mengisi instansi pelayanan
-     */
     void setInstansi(String instansi){
         this.instansi = instansi;
     }
-
     /**
-     * method untuk menampilkan data pelayanan
+     * Method untuk menampilkan data ke console
      */
     void tampilData(){
         System.out.println("Nama Pemohon  : " + namaPemohon);
