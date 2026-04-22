@@ -11,44 +11,70 @@ package com.myhink.antrian;
 /**
  * Class LayananPublik
  * Berfungsi sebagai class model untuk menyimpan data pelayanan publik
+ * Menerapkan Enkapsulasi + Overloading + Overriding
  * Tema: Sistem Antrian Pelayanan Publik
  */
 public class LayananPublik {
 
-    // atribut untuk menyimpan data pemohon
-    String namaPemohon;
-    String jenisLayanan;
-    String instansi;
+    // private (enkapsulasi)
+    private String namaPemohon;
+    private String jenisLayanan;
+    private String instansi;
 
-    /**
-     * Constructor
-     * Digunakan untuk menginisialisasi data saat object dibuat
-     * @param nama nama pemohon
-     * @param layanan jenis layanan yang dipilih
-     * @param instansi instansi terkait pelayanan
-     */
+    // constructor
     public LayananPublik(String nama, String layanan, String instansi){
         this.namaPemohon = nama;
         this.jenisLayanan = layanan;
         this.instansi = instansi;
     }
-    void setNamaPemohon(String nama){
+// OVERLOADING constructor
+    public LayananPublik(String nama){
         this.namaPemohon = nama;
+        this.jenisLayanan = "-";
+        this.instansi = "-";
+    }
+    // getter & setter
+    public String getNamaPemohon() {
+        return namaPemohon;
     }
 
-    void setJenisLayanan(String layanan){
-        this.jenisLayanan = layanan;
+    public void setNamaPemohon(String namaPemohon) {
+        this.namaPemohon = namaPemohon;
     }
 
-    void setInstansi(String instansi){
+    public String getJenisLayanan() {
+        return jenisLayanan;
+    }
+
+    public void setJenisLayanan(String jenisLayanan) {
+        this.jenisLayanan = jenisLayanan;
+    }
+
+    public String getInstansi() {
+        return instansi;
+    }
+
+    public void setInstansi(String instansi) {
         this.instansi = instansi;
     }
+
     /**
-     * Method untuk menampilkan data ke console
+     * Method dasar (akan dioverride)
      */
-    void tampilData(){
-        System.out.println("Nama Pemohon  : " + namaPemohon);
-        System.out.println("Jenis Layanan : " + jenisLayanan);
-        System.out.println("Instansi      : " + instansi);
+    public String tampilData(){
+    return "Nama Pemohon  : " + getNamaPemohon() +
+           "\nJenis Layanan : " + getJenisLayanan() +
+           "\nInstansi      : " + getInstansi();
+}
+
+    /**
+     * Overloading method
+     */
+    public String tampilData(boolean detail){
+        if(detail){
+            return tampilData();
+        } else {
+            return "Nama: " + namaPemohon;
+        }
     }
 }
