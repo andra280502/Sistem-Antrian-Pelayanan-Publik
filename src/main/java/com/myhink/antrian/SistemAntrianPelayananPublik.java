@@ -15,31 +15,28 @@ package com.myhink.antrian;
 public class SistemAntrianPelayananPublik {
 
     public static void main(String[] args) {
+        // contoh polymorphism
+        // =====================
+        // OUTPUT CONSOLE (optional)
+        // =====================
+        LayananPublik layanan = new LayananKTP(
+            "Andra Syailendra Perdana",
+            "Dinas Kependudukan",
+            "KTP Elektronik"
+        );
 
-    // =====================
-    // OUTPUT CONSOLE
-    // =====================
-    LayananPublik layanan = new LayananPublik(
-        "Andra Syailendra Perdana",
-        "Pembuatan KTP",
-        "Dinas Kependudukan"
-    );
+        System.out.println("==================================");
+        System.out.println("      SISTEM PELAYANAN PUBLIK     ");
+        System.out.println("==================================");
 
-    System.out.println("==================================");
-    System.out.println("      SISTEM PELAYANAN PUBLIK     ");
-    System.out.println("==================================");
+        // tampilkan hasil overriding
+        System.out.println(layanan.tampilData());
 
-    layanan.tampilData();
-
-
-    // =====================
-    // TAMPILKAN GUI
-    // =====================
-    java.awt.EventQueue.invokeLater(new Runnable() {
-        public void run() {
+        // =====================
+        // TAMPILKAN GUI (utama)
+        // =====================
+        java.awt.EventQueue.invokeLater(() -> {
             new GUISISTEMANTRIANPELAYANANPUBLIK().setVisible(true);
-        }
-    });
-    
+        });
     }
 }
