@@ -45,6 +45,11 @@ Sistem-Antrian-Pelayanan-Publik/
 
 ## 📷 Tampilan Program
 
-![GUI Sistem Antrian](assets/gui.png)
-![GUI Sistem Antrian](assets/gui2.png)
-![GUI Sistem Antrian](assets/gui3.png)
+### Tampilan Input
+![Input](assets/gui.png)
+
+### Tampilan Data
+![Data](assets/gui2.png)
+
+### Tampilan Hasil
+![Hasil](assets/gui3.png)
