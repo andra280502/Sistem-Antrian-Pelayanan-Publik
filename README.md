@@ -1,18 +1,33 @@
 # Sistem Antrian Pelayanan Publik
 
-Aplikasi berbasis Java (Swing) untuk simulasi sistem antrian pelayanan publik.
+Aplikasi GUI berbasis Java (NetBeans) untuk mensimulasikan sistem antrian pelayanan publik menggunakan konsep Object-Oriented Programming (OOP).
 
-## Fitur
+---
+
+## 📌 Deskripsi
+Program ini digunakan untuk mengelola data antrian pelayanan seperti pembuatan KTP dan SIM.  
+Data ditampilkan dalam bentuk tabel (`JTable`) sehingga lebih terstruktur dibandingkan `JTextArea`.
+
+---
+
+## 🎯 Fitur Utama
 - Input data pemohon
-- Jenis layanan
-- Instansi
-- Tampilan data
+- Otomatis menentukan instansi berdasarkan jenis layanan
+- Menampilkan data dalam tabel
+- Hapus data (Delete)
+- Reset input (Batal)
+- GUI berbasis Java Swing
 
-## Teknologi
-- Java
-- Swing (GUI)
-- NetBeans
+---
 
-## Cara Menjalankan
-1. Buka di NetBeans
-2. Run project
+## 🧠 Konsep OOP yang Digunakan
+- **Encapsulation** → atribut private + getter/setter
+- **Inheritance** → `LayananKTP`, `LayananSIM` mewarisi `LayananPublik`
+- **Polymorphism** → penggunaan objek parent untuk child
+- **Overriding** → method `tampilData()` di subclass
+- **Overloading** → method `tampilData(boolean detail)`
+- **Abstract Class** → `LayananPublik` sebagai class dasar
+
+---
+
+## 🏗️ Struktur Project
