@@ -42,3 +42,9 @@ Sistem-Antrian-Pelayanan-Publik/
 ├── nbproject/
 ├── build.xml
 └── README.md
+
+## 📷 Tampilan Program
+
+![GUI Sistem Antrian](assets/gui.png)
+![GUI Sistem Antrian](assets/gui2.png)
+![GUI Sistem Antrian](assets/gui3.png)
