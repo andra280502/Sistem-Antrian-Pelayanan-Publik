@@ -2,53 +2,55 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
+package com.myhink.antrian;
 
 /**
  * ============================================================
- * CLASS: LayananSIM (Subclass)
+ * CLASS: LayananKTP (Subclass)
  * ============================================================
  * Turunan dari LayananPublik
  *
  * Konsep:
- * - Inheritance
- * - Overriding
- * - Overloading
+ * - Inheritance (extends)
+ * - Overriding method tampilData()
+ * - Overloading constructor
  * ============================================================
  */
-public class LayananSIM extends LayananPublik {
+public class LayananKTP extends LayananPublik {
 
-    private String jenisSIM;
+    private String jenisKTP;
 
     // Constructor utama
-    public LayananSIM(String nama, String instansi, String jenisSIM){
-        super(nama, "Pembuatan SIM", instansi);
-        this.jenisSIM = jenisSIM;
+    public LayananKTP(String nama, String instansi, String jenisKTP){
+        super(nama, "Pembuatan KTP", instansi);
+        this.jenisKTP = jenisKTP;
     }
 
     // Overloading constructor
-    public LayananSIM(String nama){
+    public LayananKTP(String nama){
         super(nama);
-        this.jenisSIM = "SIM C";
+        this.jenisKTP = "KTP Elektronik";
     }
 
     // Getter Setter
-    public String getJenisSIM(){
-        return jenisSIM;
+    public String getJenisKTP(){
+        return jenisKTP;
     }
 
-    public void setJenisSIM(String jenisSIM){
-        this.jenisSIM = jenisSIM;
+    public void setJenisKTP(String jenisKTP){
+        this.jenisKTP = jenisKTP;
     }
 
     /**
      * OVERRIDING METHOD
+     * Implementasi method abstract dari parent
      */
     @Override
     public String tampilData(){
-        return "=== LAYANAN SIM ===\n" +
+        return "=== LAYANAN KTP ===\n" +
                "Nama Pemohon : " + getNamaPemohon() +
                "\nJenis Layanan : " + getJenisLayanan() +
                "\nInstansi : " + getInstansi() +
-               "\nJenis SIM : " + getJenisSIM();
+               "\nJenis KTP : " + getJenisKTP();
     }
 }
