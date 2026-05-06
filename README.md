@@ -31,3 +31,14 @@ Data ditampilkan dalam bentuk tabel (`JTable`) sehingga lebih terstruktur diband
 ---
 
 ## 🏗️ Struktur Project
+Sistem-Antrian-Pelayanan-Publik/
+├── src/
+│ └── com/myhink/antrian/
+│ ├── LayananPublik.java
+│ ├── LayananKTP.java
+│ ├── LayananSIM.java
+│ ├── GUISISTEMANTRIANPELAYANANPUBLIK.java
+│
+├── nbproject/
+├── build.xml
+└── README.md
